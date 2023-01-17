@@ -41,16 +41,17 @@ function App() {
         sx={{
           display: 'flex',
           width: '100%',
-          height: '90vh',
+          height: { lg: '90vh', xm: 'auto' },
+          marginY: 'auto',
           flexDirection: { lg: 'row', md: 'row', sm: 'row', xs: 'column' },
           boxShadow:
             '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-          padding: '0px !important',
+          padding: '1rem !important',
           marginX: {
-            ld: '1rem !important',
+            lg: '1rem !important',
             md: '1rem !important',
             sm: '1rem !important',
-            xs: '0 !important',
+            xs: '1rem !important',
           },
         }}
       >
@@ -58,7 +59,6 @@ function App() {
           sx={{
             flex: 1,
             width: '100%',
-            borderRight: '1px solid #e0e0e0',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -155,7 +155,7 @@ function App() {
           <Typography variant="body2" sx={{ color: 'grey' }}>
             Create, Add, Edit and Save it!
           </Typography>
-          <img src={Analytics} alt="logo" width="400px" />
+          <img src={Analytics} alt="logo" width="350px" />
         </Box>
       </Container>
     </div>
