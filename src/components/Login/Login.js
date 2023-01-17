@@ -79,9 +79,12 @@ function App() {
           <TextField
             label="Username"
             variant="outlined"
-            sx={{ width: '70%' }}
+            sx={{ width: { lg: '70%', md: '70%', sm: '70%', xs: '80%' } }}
           />
-          <FormControl sx={{ m: 1, width: '70%' }} variant="outlined">
+          <FormControl
+            sx={{ m: 1, width: { lg: '70%', md: '70%', sm: '70%', xs: '80%' } }}
+            variant="outlined"
+          >
             <InputLabel htmlFor="outlined-adornment-password">
               Password
             </InputLabel>
