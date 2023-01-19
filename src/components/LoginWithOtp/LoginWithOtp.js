@@ -8,9 +8,15 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import Logo from '../../assets/logo.png';
+import { MuiOtpInput } from 'mui-one-time-password-input';
 
 const LoginWithOtp = () => {
-  const [OTP, setOTP] = useState(false);
+  const [isOtpVisible, setIsOtpVisible] = useState(false);
+  const [otp, setOtp] = React.useState('');
+
+  const handleChange = (newValue) => {
+    setOtp(newValue);
+  };
   return (
     <Box
       sx={{
@@ -33,7 +39,7 @@ const LoginWithOtp = () => {
       <Typography sx={{ marginBottom: '2rem', color: '#A5A4A7' }}>
         Member Login
       </Typography>
-      {OTP ? (
+      {isOtpVisible ? (
         <>
           <Container
             sx={{
@@ -42,10 +48,7 @@ const LoginWithOtp = () => {
               justifyContent: 'space-evenly',
             }}
           >
-            <TextField sx={{ width: '3rem' }} />
-            <TextField sx={{ width: '3rem' }} />
-            <TextField sx={{ width: '3rem' }} />
-            <TextField sx={{ width: '3rem' }} />
+            <MuiOtpInput value={otp} onChange={handleChange} />
           </Container>
           <Button
             sx={{
@@ -86,7 +89,7 @@ const LoginWithOtp = () => {
               borderRadius: '10px',
               paddingY: '0.5rem',
             }}
-            onClick={() => setOTP(true)}
+            onClick={() => setIsOtpVisible(true)}
           >
             Send OTP
           </Button>
