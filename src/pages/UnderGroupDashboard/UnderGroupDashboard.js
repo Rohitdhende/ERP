@@ -26,13 +26,13 @@ const UnderGroupDashboard = () => {
         onClick={() => setIsUserModalOpen(true)}
         sx={{ marginTop: '3rem' }}
       >
-        Add User Details
+        Add Location
       </Button>
 
       <UserDataModal
         isOpen={isUserModalModalOpen}
         onClose={(value) => setIsUserModalOpen(value)}
-        modalHeading="Add User Details"
+        modalHeading="Add Location"
       />
     </div>
   );
