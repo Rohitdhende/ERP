@@ -9,8 +9,10 @@ import {
 import React, { useState } from 'react';
 import Logo from '../../assets/logo.png';
 import { MuiOtpInput } from 'mui-one-time-password-input';
+import { useNavigate } from 'react-router-dom';
 
 const LoginWithOtp = () => {
+  const navigate = useNavigate();
   const [isOtpVisible, setIsOtpVisible] = useState(false);
   const [otp, setOtp] = React.useState('');
 
@@ -50,6 +52,7 @@ const LoginWithOtp = () => {
           >
             <MuiOtpInput value={otp} onChange={handleChange} />
           </Container>
+
           <Button
             sx={{
               backgroundColor: '#6BDB8A',
@@ -61,6 +64,7 @@ const LoginWithOtp = () => {
               borderRadius: '10px',
               paddingY: '0.5rem',
             }}
+            onClick={() => navigate('/under-group-admin-dashboard')}
           >
             Login
           </Button>
@@ -68,7 +72,7 @@ const LoginWithOtp = () => {
       ) : (
         <>
           <TextField
-            label="With normal TextField"
+            label="Mobile Number"
             id="outlined-start-adornment"
             sx={{ m: 1, width: '70%' }}
             InputProps={{
@@ -77,7 +81,13 @@ const LoginWithOtp = () => {
               ),
             }}
           />
-
+          Or
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            sx={{ m: 1, width: '70%' }}
+          />
           <Button
             sx={{
               backgroundColor: '#6BDB8A',
