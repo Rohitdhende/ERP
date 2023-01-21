@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import React from 'react';
 import UserDataModal from '../../components/LoginWithOtp/UserDataModal/UserDataModal';
 
@@ -15,7 +15,10 @@ const UnderGroupDashboard = () => {
         flexDirection: 'column',
       }}
     >
-      <Typography variant="h4" sx={{ marginTop: '3rem' }}>
+      <Typography
+        variant={{ lg: 'h4', md: 'h4', sm: 'h5', xs: 'h5' }}
+        sx={{ marginTop: '3rem' }}
+      >
         Under Group Admin Dashboard
       </Typography>
       <Button
