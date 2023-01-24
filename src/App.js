@@ -3,7 +3,7 @@ import './App.css';
 import '@tremor/react/dist/esm/tremor.css';
 import Login from './pages/Login/Login';
 import UnderGroupLogin from './pages/UnderGroupLogin/UnderGroupLogin';
-import UnderGroupDashboard from './pages/UnderGroupDashboard/UnderGroupDashboard';
+import UnderGroupLocation from './pages/UnderGroupLocation/UnderGroupLocation';
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
         />
         <Route
           exact
-          path="/under-group-admin-dashboard"
-          element={<UnderGroupDashboard />}
+          path="/under-group-admin-location"
+          element={<UnderGroupLocation />}
         />
       </Routes>
     </div>

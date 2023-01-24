@@ -64,7 +64,7 @@ const LoginWithOtp = () => {
               borderRadius: '10px',
               paddingY: '0.5rem',
             }}
-            onClick={() => navigate('/under-group-admin-dashboard')}
+            onClick={() => navigate('/under-group-admin-location')}
           >
             Login
           </Button>
