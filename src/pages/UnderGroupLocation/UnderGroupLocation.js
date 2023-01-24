@@ -3,16 +3,12 @@ import {
   Button,
   Container,
   FormControl,
-  InputLabel,
   OutlinedInput,
   Typography,
 } from '@mui/material';
 import React from 'react';
-import UserDataModal from '../../components/LoginWithOtp/UserDataModal/UserDataModal';
 
 const UnderGroupLocation = () => {
-  const [isUserModalModalOpen, setIsUserModalOpen] = useState(false);
-
   const initialFormState = {
     continent: '',
     country: '',
