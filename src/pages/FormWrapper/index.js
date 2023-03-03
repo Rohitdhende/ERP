@@ -28,6 +28,8 @@ export default function BasicTabs() {
           borderBottom: 1,
           borderColor: 'divider',
           paddingTop: '4.5rem',
+          backgroundColor: '#EFF0F3',
+          zIndex: 1111,
         }}
       >
         <Tabs
