@@ -3,11 +3,14 @@ import './App.css';
 import '@tremor/react/dist/esm/tremor.css';
 import Login from './pages/Login/Login';
 import UnderGroupLogin from './pages/UnderGroupLogin/UnderGroupLogin';
-import UnderGroupLocation from './pages/UnderGroupLocation/UnderGroupLocation';
+import FormWrapper from './pages/FormWrapper';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <Routes>
         <Route exact path="/" element={<Login />} />
         <Route
@@ -17,8 +20,8 @@ function App() {
         />
         <Route
           exact
-          path="/under-group-admin-location"
-          element={<UnderGroupLocation />}
+          path="/under-group-admin-dashboard"
+          element={<FormWrapper />}
         />
       </Routes>
     </div>

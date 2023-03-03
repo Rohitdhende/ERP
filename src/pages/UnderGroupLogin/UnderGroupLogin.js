@@ -16,8 +16,11 @@ import TextField from '@mui/material/TextField';
 import Background from '../../assets/login-background.jpg';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import LoginWithOtp from '../../components/LoginWithOtp/LoginWithOtp';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function UnderGroupAdminLogin() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -27,7 +30,7 @@ function UnderGroupAdminLogin() {
   };
 
   const [loginWithOtp, setLoginWithOTP] = useState(false);
-
+  const notify = () => toast.success('User Logged in Successfully!');
   return (
     <div
       style={{
@@ -136,6 +139,10 @@ function UnderGroupAdminLogin() {
                 width: '70%',
                 borderRadius: '10px',
                 paddingY: '0.5rem',
+              }}
+              onClick={() => {
+                notify();
+                navigate('/under-group-admin-location');
               }}
             >
               Login

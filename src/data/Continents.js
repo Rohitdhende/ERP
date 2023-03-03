@@ -1,4 +1,4 @@
-export const continents = [
+export const Continents = [
   {
     name: 'Africa',
     key: 'AF',
