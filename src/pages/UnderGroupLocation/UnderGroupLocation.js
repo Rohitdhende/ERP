@@ -17,7 +17,6 @@ import { countries } from '../../data/Countries.js';
 import { states } from '../../data/States.js';
 
 import './UnderGroupLocation.css';
-import { useNavigate } from 'react-router-dom';
 
 const UnderGroupLocation = () => {
   const initialFormState = {
@@ -35,7 +34,6 @@ const UnderGroupLocation = () => {
     setFormData({ ...formData, [prop]: event.target.value.trim() });
   };
 
-  const navigate = useNavigate();
   //Handle Form Submit
   const handleSubmitForm = () => {
     console.log(formData);
